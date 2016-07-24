@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="txt">
+	<input type="button" class="btn" value="添加">
+	<ul class="list" >
+		<li>香蕉&nbsp;<span class="del">删除</span></li>
+		<li>鸭梨&nbsp;<span class="del">删除</span></li>
+		<li>葡萄&nbsp;<span class="del">删除</span></li>
+		<li>荔枝&nbsp;<span class="del">删除</span></li>
+		<li>可乐&nbsp;<span class="del">删除</span></li>
+	</ul>
+	<script>
+		var txt = document.querySelector(".txt")
+		var btn = document.querySelector(".btn")
+		var ul = document.querySelector(".list")
+		var span = document.querySelector("del")
+		
+
+		btn.onclick=function(){
+			var value = txt.value;
+			var str = document.createTextNode(value);
+			var li = document.createElement("li");
+			li.appendChild(str);
+			ul.appendChild(li);
+			
+			var sspan = document.createTextNode("删除");
+			sspan.className="del"
+			var del = document.createElement("span");
+			del.appendChild(sspan);
+			li.appendChild(del);
+			
+
+		}
+			ul.addEventListener("click",function(event){
+				var target = event.target
+				if(target.className=="del"){
+				this.removeChild(target.parentNode);
+				}
+			},false)
+	</script>
+</body>
+</html>
+			
+					
+		
+		
+		
+		
+		
+		
+
+			
+
+			
+		
+
+
+       

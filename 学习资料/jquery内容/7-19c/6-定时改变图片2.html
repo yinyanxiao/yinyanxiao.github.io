@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0px;
+	 padding:0px;
+	}
+	.big{
+		width:300px;
+		height:300px;
+		border:1px solid red;
+		overflow: hidden;
+	}
+	.sbig{
+		width:1000px;
+		height:300px;
+		border:1px solid blue;
+	}
+	.sbig ul li{
+		width:300px;
+		height:300px;
+		float:left;
+		list-style:none;
+		
+	}
+	.list li{
+		width:20px;
+		height:20px;
+		border:1px solid red;
+		text-align: center;
+		line-height: 20px;
+		list-style: none;
+		float:left;
+		margin-top:20px;
+	}
+	.list .one{
+		margin-left:50px;
+	}
+	
+
+	</style>
+</head>
+<body>
+<div class="big">
+	<div class="sbig">
+		<ul>
+			<li><img class="pic" src="images/0.jpg" alt=""></li>
+			<li><img class="pic" src="images/1.jpg" alt=""></li>
+			<li><img class="pic" src="images/2.jpg" alt=""></li>
+			
+		</ul>
+	</div>
+</div>
+</box1>
+
+<script src="jquery.js"></script>
+<script>
+	var temp = true;
+	var i = 0;
+	function fun(){
+		if(temp){
+			i++;
+			if(i==2){
+				temp=false;
+			}
+         console.log(i)
+		}
+		else{
+			i--;
+			if(i==0){
+				temp=true
+			}
+			console.log(i)
+		}
+		$(".sbig ul").animate({"margin-left":i*-300},500)
+
+
+
+	}
+	setInterval(fun,1000)
+
+		
+</script>
+</body>
+</html>
+	
+	
+
+		 
+		
+	
+	
+		
+		
+
+
+		
+		
+
+			
+		
+		
+		
+	
+
+
+	
+	
+
+
+	
+
+	
+

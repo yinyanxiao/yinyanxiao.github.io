@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form>
+		<input type="text" class="result">
+		<input type="button" value="0" class="str">
+		<input type="button" value="1" class="str">
+		<input type="button" value="2" class="str">
+		<input type="button" value="3" class="str">
+		<input type="button" value="4" class="str">
+		<input type="button" value="5" class="str">
+		<input type="button" value="6" class="str">
+		<input type="button" value="7" class="str">
+		<input type="button" value="8" class="str">
+		<input type="button" value="9" class="str">
+ 		<input type="button" value="+" class="sign">
+ 		<input type="button" value="-" class="sign">
+ 		<input type="button" value="*" class="sign">
+ 		<input type="button" value="/" class="sign">
+ 		<input type="button" value="=" class="clear">
+ 		<input type="button" value="清空" class="cla">
+
+ 	</form>
+ 
+ 	
+	<script src="jquery.js"></script>
+	<script>
+		var sum1=""
+		var sum2=""
+		var sign=""
+		
+		$(".str").click(function(){
+			
+			var num=$(this).val();
+
+			if(sign=="")
+			 {
+			 sum1+=num
+			 $(".result").val(sum1);
+			}
+			else{
+				sum2+=num
+			 $(".result").val(sum2);
+			}
+		})
+		$(".sign").click(function(){
+			sign = $(this).val();
+		 
+		})
+		
+		$(".clear").click(function(){
+			if(sign == "+"){
+				var result = Number(sum1) + Number(sum2);
+			}
+			if(sign == "-"){
+				var result = Number(sum1) - Number(sun2);
+			}
+			if(sign == "*"){
+				var result = Number(sum1) * Number(sum2);
+			}
+			if(sign == "/"){
+				var result = Number(sum1) / Number(sum2);
+			}
+			$(".result").val(result);
+			$(".cla").click(function(){
+				sun1="";
+				sum2="";
+				sign="";
+				$(".result").val("")
+
+			})
+				
+				
+			})
+
+			
+
+
+
+			
+
+			
+
+
+			
+
+
+
+	</script>
+</body>
+</html>
+ 		
+ 		
+
+
+
+
+	

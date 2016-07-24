@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button class="btn1">按钮1</button>
+	<button class="btn2">按钮2</button>
+	<button class="btn3">按钮3</button>
+	<button class="btn4">移除事件</button>
+
+	
+	<script>
+		var obtn1 = document.querySelector(".btn1")
+		var obtn2 = document.querySelector(".btn2")
+		var obtn3 = document.querySelector(".btn3")
+		var obtn4 = document.querySelector(".btn4")
+		obtn1.addEventListener("click",function(){
+			alert("hello");
+		},false)
+		obtn2.addEventListener("click",function(){
+			alert("world");
+		},false)
+
+		function fun(){
+			alert("hel,lo")
+		}
+		obtn3.addEventListener("click",fun,false)
+		obtn4.addEventListener("click"function(){
+			obtn3.removeEventListener("click",fun,false)
+		},false)
+
+
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			.green{
+				color:green;
+			}
+			.red{
+				color:red;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<form>
+			<label>邮箱：</label>
+			<input type="text" class="str">
+			<span class="inf"></span>
+		</form>
+		<script src="jquery.js"></script>
+		<script>
+			var re = /^[0-9a-zA-Z\_]{5,12}\@qq\.com$/;
+			$(".str").blur(function(){
+				var str = $(".str").val();
+				var result = re.test(str);
+				if(result){
+					$(".inf").text("成功").removeClass().addClass("green")
+
+				}else{
+					$(".inf").text("失败").removeClass().addClass("red")
+				}
+			})
+			
+		</script>
+	</body>
+	</html>	
+			
+			
+				
+
+
+				
+				
+					
+		
+				
+				
+
+
+				
+
+		

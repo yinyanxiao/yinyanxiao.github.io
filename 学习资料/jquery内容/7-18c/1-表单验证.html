@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<label>手机号：</label>
+	<input type="text" class="str">
+	<script src="jquery.js"></script>
+	<p class="res"></p>
+	
+	<script>
+	var re = /^[0-9]{11}$/
+	$(".str").blur(function(){
+		var str = $(".str").val();
+		var result = re.test(str);
+		var span = checkIn(result);
+		$(".res").html(span)
+
+	})
+	function checkIn(bool){
+		var trues = "<span class='green'>正确</span>"
+		var falses = "<span class='red'>错误</span>"
+		if(bool){
+			return trues;
+		}else{
+			return falses;
+		}
+	}
+		
+	</script>
+	
+	
+</body>
+</html>
+
+
+
+		
+				
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+		

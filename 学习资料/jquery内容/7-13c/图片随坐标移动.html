@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			height: 300px;
+			width: 800px;
+			border:1px solid red;
+		}
+		.box .pic1{
+			position: absolute; 
+			top:100px;
+			left:100px;
+			display:none;
+		}
+		.box .pic2{
+			position: absolute; 
+			top:100px;
+			left:100px;
+			display:none;
+		}
+		.box .pic3{
+			position: absolute; 
+			top:100px;
+			left:100px;
+			display:none;
+		}
+		
+			
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img class="a"src="images/1.jpg" alt="">
+		<img class="b"src="images/2.jpg" alt="">
+		<img class="c"src="images/3.jpg" alt="">
+		<img class="pic1" src="images/4.jpg" alt="">
+		<img class="pic2" src="images/5.jpg" alt="">
+		<img class="pic3" src="images/6.jpg" alt="">
+		
+	</div>
+	<script src="jquery.js"></script>
+	<script>
+	$(".box .a").mouseenter(function(){
+		$(".box .pic1").show()
+	})
+		
+	$(".box .a").mousemove(function(event){
+		var x=event.pageX;
+		var y=event.pageY;
+		$(".box .pic1").text(x);
+		$(".box .pic1").text(y);
+		$(".box .pic1").css("top",y+10).css("left",x+10);
+
+	})
+	$(".box .a").mouseleave(function(){
+		$(".box .pic1").hide()
+	})
+
+
+	$(".box .b").mouseenter(function(){
+		$(".box .pic2").show()
+	})
+		
+	$(".box .b").mousemove(function(event){
+		var x=event.pageX;
+		var y=event.pageY;
+		$(".box .pic2").text(x);
+		$(".box .pic2").text(y);
+		$(".box .pic2").css("top",y+10).css("left",x+10);
+
+	})
+	$(".box .b").mouseleave(function(){
+		$(".box .pic2").hide()
+	})	
+
+
+ $(".box .c").mouseenter(function(){
+		$(".box .pic3").show()
+	})
+		
+	$(".box .c").mousemove(function(event){
+		var x=event.pageX;
+		var y=event.pageY;
+		$(".box .pic3").text(x);
+		$(".box .pic3").text(y);
+		$(".box .pic3").css("top",y+10).css("left",x+10);
+
+	})
+	$(".box .c").mouseleave(function(){
+		$(".box .pic3").hide()
+	})
+	</script>
+	
+</body>
+</html>
+
+
+		
+	
+
+
+		
+
+	
+	
+
+
+	

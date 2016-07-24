@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="tet">
+	<input type="button" value="随机" class="btn">
+	<script src="jquery.js"></script>
+
+	<script>
+		var num=Math.floor(Math.random()*10 +1);
+	
+		$(".btn").click(function(){
+			var tet=$(".tet").val();
+			
+			if(num>tet){
+				alert("此数太小了")
+			}
+			if(num==tet){
+				alert("恭喜答对了")
+			}
+			if(num<tet){
+				alert("此数太大了")
+			num = Math.floor(Math.random() * 10);//重新开始一盘
+			}
+		})
+		
+	</script>
+	
+</body>
+</html>

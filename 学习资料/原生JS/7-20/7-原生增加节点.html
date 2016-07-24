@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="txt">
+	<input type="button" class="btn" value="增加">
+	<ul class="list">
+		<li>香蕉</li>
+		<li>鸭梨</li>
+		<li>葡萄</li>
+	</ul>
+	<script>
+		var otxt = document.querySelector(".txt")
+		var obtn = document.querySelector(".btn")
+		var olist = document.querySelector(".list")
+		
+		var value = otxt.value
+		var ostr = document.createTextNode(value);
+		var oli = document.createElement("li");
+		oli appendChild(ostr)
+		olist appendChild(oli)
+	</script>
+</body>
+</html>

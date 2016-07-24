@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{  margin:0px;
+		padding:0px;}
+	#nav>li{
+		list-style: none;
+		width:60px;
+		height: 30px;
+		border:1px solid red;
+		float:left;
+		text-align: center;
+		line-height: 40px;
+	}
+	.inner-list li{
+		list-style: none;
+		/*text-align: center;*/
+		display:none;
+	}
+
+
+	</style>
+</head>
+<body>
+	<ul id="nav">
+		<li>
+			<a href="">图书</a>
+			<ul class="inner-list">
+				<li>图书</li>
+				<li>图书</li>
+				<li>图书</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">图书</a>
+			<ul class="inner-list">
+				<li>图书</li>
+				<li>图书</li>
+				<li>图书</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">图书</a>
+			<ul class="inner-list">
+				<li>图书</li>
+				<li>图书</li>
+				<li>图书</li>
+			</ul>
+		</li>
+	</ul>
+	<script src="jquery.js"></script>
+	<script>
+	$("#nav>li").mouseenter(function(){
+		$(this).find(".inner-list li").slideDown(5000);
+	}).mouseleave(function(){
+		$(this).find(".inner-list li").slideUp(5000);
+	})
+	</script>
+</body>
+</html>
